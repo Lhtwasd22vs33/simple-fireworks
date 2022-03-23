@@ -1,7 +1,12 @@
 class fireworks {
     constructor(canvas) {
-        this.canvas = canvas
-        this.context = this.canvas.getContext('2d');
+        if(canvas){
+            this.canvas = canvas
+            this.context = this.canvas.getContext('2d');
+        }else{
+            
+        }
+        
         this._fireworks = {}
     }
     clearCanvas() {
