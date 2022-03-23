@@ -1,0 +1,12 @@
+{
+  "name": "simple-fireworks",
+  "version": "1.0.0",
+  "description": "烟花,帮助你简单快捷的生成烟花效果,你只需要给予canvas对象和一些简单的参数",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["fireworks"],
+  "author": "虚世梦人",
+  "license": "ISC"
+}
