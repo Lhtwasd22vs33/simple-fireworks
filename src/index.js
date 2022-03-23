@@ -1,31 +1,60 @@
 /*
-    obj:
-        x:x坐标 必须
-        y:y坐标 必须
-        hue:定义色相 (0 到 360)-0(或 360) 为红色 120 为绿色, 240 为蓝色  默认:0-360
-        hueVariance:色调变化 默认30
-        count:数量 默认:100
-        angleStart : 起始角度 0
-        angleEnd : 结束角度 359
-        // radians:弧度 
-        speed:速度  默认:0.4-14.4
-        radius:半径
-        size:大小
-        brightness:亮度
-        alpha:透明度
-        drop:下坠速度
-    no obj:
-        angle:角  0-359的随机数  默认:0-359
-    */
+    obj:{
+        // 位于canvas的x轴坐标 必填  Number
+        // x,
+        // 位于canvas的y轴坐标 必填 Number
+        // y,
+        // 数量 默认:100 Number
+        // count: 100,
+        // 烟花半径 默认:100 Number
+        // radius: 100,
+        // 下坠速度 默认:0 Number
+        // drop: 1,
+
+        // 色相  默认为0-360的随机数 Number
+        // hue: 240,
+        // 色调变化 默认:0 Number
+        // hueVariance: 30,
+        // 饱和度 默认:100% 数值越大颜色越鲜艳  String
+        // saturations:'100%',
+
+        // 角度 默认:0-359 Number
+        // angleStart:0,
+        // angleEnd:359,
+
+        // 向四周扩散速度 默认:0.5-14.5 Number
+        // speedMin:1,
+        // speedMax:4,
+
+        // 粒子大小 默认:1-3 Number
+        // sizeMin: 1,
+        // sizeMax: 20,
+
+        // 亮度 默认:50-80  亮度越高越接近白色 Number
+        // brightnessMin:50,
+        // brightnessMax:80,
+
+        // 透明度 默认:40-100 Number
+        // alphaMin:40,
+        // alphaMax:100,
+
+        // 颜色 如果有此数值 hue和hueVariance自动失效 Array['String']
+        // color:['red','blue','green'],
+
+        // 溶解，消失速度 1-100  默认:5 Number
+        // dissolve: 7,
+
+        // 加速度  默认:0  溅射效果 效果是让开始的速度加快，并且运动距离更远 Number
+        acceleration: 10,
+    }
+*/
 
 
 class fireworks {
     constructor(canvas) {
         this.canvas = canvas
-
         this.context = this.canvas.getContext('2d');
         this._fireworks = {}
-
     }
     clearCanvas() {
         this.context.globalCompositeOperation = 'destination-out';
@@ -44,19 +73,21 @@ class fireworks {
         if (!this._fireworks) {
             this._fireworks = {}
         }
+
         this.key = Date.now()
 
         let _obj = JSON.parse(JSON.stringify(obj))
 
         _obj.key = this.key
 
-
-        this._fireworks[this.key] = {
+        this._init_1(_obj)
+    }
+    _init_1(obj){
+        this._fireworks[obj.key] = {
             particles: []
         }
-
-        this._createFireworks(_obj)
-        this._drawFireworks(_obj)
+        this._createFireworks(obj)
+        this._drawFireworks(obj)
     }
     _createFireworks(obj) {
         this._fireworks[obj.key].particles = []
@@ -76,7 +107,6 @@ class fireworks {
 
         let brightnessMin = obj.brightnessMin || 50
         let brightnessMax = obj.brightnessMax || 80
-
 
         let alphaMin = obj.alphaMin || 40
         let alphaMax = obj.alphaMax || 100
