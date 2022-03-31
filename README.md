@@ -4,10 +4,11 @@
 
 #### <p align="center">简单快捷的在js中生成烟花效果 <br> 拥有很强的自定义效果,你可以自定义出属于你的烟花效果 </p>
 
+>注意：simple-fireworks会在body里面创建一个canvas对象，该canvas并不会影响下层内容的点击事件
+
 <br>
 
 ### 使用方法：
-
 
 ````
 npm i simple-fireworks
@@ -72,6 +73,7 @@ document.addEventListener('mousedown', (e) => {
 |two_obj||object||{}|第二次爆开的烟花参数 参数内容同上,这里的x,y,值为第一次爆开的粒子的位置|
 
 <br>
+
 
 ### 示例
 > [烟花](https://github.com/Lhtwasd22vs33/simple-fireworks/blob/main/examples/%E7%83%9F%E8%8A%B11.html)
