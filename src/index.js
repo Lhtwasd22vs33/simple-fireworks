@@ -118,8 +118,8 @@ class fireworks {
         let angleStart = obj.angleStart || 0
         let angleEnd = obj.angleEnd || 359
 
-        let speedMin = obj.speedMin || 0.5
-        let speedMax = obj.speedMax || 14.5
+        let speedMin = obj.speedMin || 0.4
+        let speedMax = obj.speedMax || 5.4
 
         let sizeMin = obj.sizeMin || 1
         let sizeMax = obj.sizeMax || 3
