@@ -19,14 +19,12 @@ import fireworks from 'simple-fireworks'
 ````
 
 ````
-
 const new_fireworks = new fireworks()
 
 // 获取点击坐标
 document.addEventListener('mousedown', (e) => {
-    //canvas的宽高*4 所以坐标也*4
-    var x = e.clientX * 4;
-    var y = e.clientY * 4;
+    var x = e.clientX;
+    var y = e.clientY;
 
     // 绘制烟花
     new_fireworks.draw({
