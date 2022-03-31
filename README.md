@@ -87,3 +87,5 @@ document.addEventListener('mousedown', (e) => {
 
 
 ### [GitHub链接:https://github.com/Lhtwasd22vs33/simple-fireworks](https://github.com/Lhtwasd22vs33/simple-fireworks)
+
+### [npm链接:https://www.npmjs.com/package/simple-fireworks](https://www.npmjs.com/package/simple-fireworks)
