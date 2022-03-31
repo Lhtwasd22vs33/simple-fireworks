@@ -75,9 +75,11 @@ document.addEventListener('mousedown', (e) => {
 
 ### 示例
 
-> [GitHub链接:https://github.com/Lhtwasd22vs33/simple-fireworks](https://github.com/Lhtwasd22vs33/simple-fireworks)
+> [二次爆炸](https://github.com/Lhtwasd22vs33/simple-fireworks/blob/main/examples/%E7%83%9F%E8%8A%B12.html)
+
+
 
 <br>
 
 
-### [二次爆炸](https://github.com/Lhtwasd22vs33/simple-fireworks)
+### [GitHub链接:https://github.com/Lhtwasd22vs33/simple-fireworks](https://github.com/Lhtwasd22vs33/simple-fireworks)
