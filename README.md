@@ -57,8 +57,8 @@ document.addEventListener('mousedown', (e) => {
 |alphaMax||Number||100|最大透明度|
 |angleStart||Number||0|开始角度|
 |angleEnd||Number||359|结束角度|
-|speedMin||Number||0.5|最小扩散速度|
-|speedMax||Number||14.5|最大扩散速度|
+|speedMin||Number||0.4|最小扩散速度|
+|speedMax||Number||5.4|最大扩散速度|
 |acceleration||Number||0|加速度(溅射效果) 效果是会让一开始的速度很快,并且运动距离更远|
 |sizeMin||Number||1|最小粒子|
 |sizeMax||Number||3|最大粒子|
