@@ -139,7 +139,7 @@ document.addEventListener('mousedown', (e) => {
 
 >> ![img](./test/%E7%83%9F%E8%8A%B12.gif)
 
-### CircleParticle
+### PointLine
 > PointLine 从底部生成一个圆形粒子,向上运动到x,y的位置  x:横坐标 y:纵坐标 obj:参数对象 用于修改粒子的参数
 
 ````
