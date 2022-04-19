@@ -18,6 +18,7 @@ import fireworks from 'simple-fireworks'
 // 获取点击坐标
 document.addEventListener('mousedown', (e) => {
     //window.devicePixelRatio 屏幕像素比
+    //这里*window.devicePixelRatio是为了兼容不同屏幕,如果没有,会造成粒子生成的位置有所偏移
     var x = e.clientX * window.devicePixelRatio;
     var y = e.clientY * window.devicePixelRatio;
 
@@ -58,7 +59,7 @@ document.addEventListener('mousedown', (e) => {
         //向粒子数组中添加粒子
         var i = 100;
         while (i--) {
-          fireworks.particles.push(new fireworks.LineParticle(x, y));
+          fireworks.particles.push(new fireworks.CircleParticle(x, y));
         }
 
         timerTick = 0;

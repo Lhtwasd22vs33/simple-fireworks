@@ -8,7 +8,11 @@
     "fireworks",
     "simple-fireworks",
     "烟花",
-    "自定义烟花"
+    "自定义烟花",
+    "CircleParticle",
+    "粒子",
+    "canvas",
+    "动画"
   ],
   "author": "虚世梦人",
   "license": "ISC",
